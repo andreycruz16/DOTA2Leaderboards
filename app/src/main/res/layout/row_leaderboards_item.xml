@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:text="Rank"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewRank"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_width="5dp" />
+
+        <TextView
+            android:text="Name"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewName"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textAlignment="viewStart"
+            android:layout_width="150dp" />
+
+        <TextView
+            android:text="Solo_MMR"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewSoloMMR"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_width="20dp" />
+    </LinearLayout>
+</LinearLayout>
