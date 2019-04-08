@@ -42,17 +42,12 @@ public class MainActivity extends AppCompatActivity {
      */
     private ViewPager mViewPager;
     private boolean doubleBackToExitPressedOnce = false;
-//    FOR TESTING
-    static final String URL_AMERICA_FEED = "http://192.168.137.1/json/mmr/america.json";
-    static final String URL_EUROPE_FEED = "http://192.168.137.1/json/mmr/europe.json";
-    static final String URL_SEA_FEED = "http://192.168.137.1/json/mmr/sea.json";
-    static final String URL_CHINA_FEED = "http://192.168.137.1/json/mmr/china.json";
 
 //    REAL DATA
-//    static final String URL_AMERICA_FEED = "http://www.dota2.com/webapi/ILeaderboard/GetDivisionLeaderboard/v0001?division=americas";
-//    static final String URL_EUROPE_FEED = "http://www.dota2.com/webapi/ILeaderboard/GetDivisionLeaderboard/v0001?division=europe";
-//    static final String URL_SEA_FEED = "http://www.dota2.com/webapi/ILeaderboard/GetDivisionLeaderboard/v0001?division=se_asia";
-//    static final String URL_CHINA_FEED = "http://www.dota2.com/webapi/ILeaderboard/GetDivisionLeaderboard/v0001?division=china";
+    static final String URL_AMERICA_FEED = "http://www.dota2.com/webapi/ILeaderboard/GetDivisionLeaderboard/v0001?division=americas";
+    static final String URL_EUROPE_FEED = "http://www.dota2.com/webapi/ILeaderboard/GetDivisionLeaderboard/v0001?division=europe";
+    static final String URL_SEA_FEED = "http://www.dota2.com/webapi/ILeaderboard/GetDivisionLeaderboard/v0001?division=se_asia";
+    static final String URL_CHINA_FEED = "http://www.dota2.com/webapi/ILeaderboard/GetDivisionLeaderboard/v0001?division=china";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,10 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setTitle("Leaderboards");
+        setTitle("DOTA2 Leaderboard");
 
         if(!isNetworkAvailable(getApplicationContext())) {
-//            Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
             Snackbar snack = Snackbar.make(getWindow().getDecorView().getRootView(), "Connect to WiFi or Mobile Data", Snackbar.LENGTH_LONG)
                     .setAction("Action", null);
             ViewGroup group = (ViewGroup) snack.getView();

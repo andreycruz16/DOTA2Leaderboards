@@ -1,6 +1,7 @@
 package com.markandreydelacruz.dota2leaderboards.Adapter;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,8 +31,9 @@ public class LeaderboardsAdapter extends ArrayAdapter {
         inflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
     }
 
+    @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
 
         LeaderboardsAdapter.ViewHolder holder = null;
 
@@ -62,8 +64,8 @@ public class LeaderboardsAdapter extends ArrayAdapter {
         } else {
             holder.textViewName.setText(leaderboardsModelList.get(position).getTeam_tag() + "." + leaderboardsModelList.get(position).getSponsor() + "." + leaderboardsModelList.get(position).getName());
         }
-        holder.textViewSoloMMR.setText(String.valueOf(leaderboardsModelList.get(position).getSolo_mmr()));
-
+//        holder.textViewSoloMMR.setText(String.valueOf(leaderboardsModelList.get(position).getSolo_mmr()));
+        holder.textViewSoloMMR.setText("");
         return convertView;
     }
 
