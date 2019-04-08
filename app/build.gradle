@@ -31,5 +31,5 @@ dependencies {
     implementation 'com.loopj.android:android-async-http:1.4.9'
     implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-//    compile 'com.google.android.gms:play-services-ads:17.2.0'
+    implementation 'com.google.android.gms:play-services-ads:17.2.0'
 }
