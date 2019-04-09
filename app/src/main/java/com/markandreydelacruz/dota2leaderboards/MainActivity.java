@@ -25,6 +25,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 public class MainActivity extends AppCompatActivity {
 
     /**
@@ -42,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private ViewPager mViewPager;
     private boolean doubleBackToExitPressedOnce = false;
+    private AdView mAdView;
 
 //    REAL DATA
     static final String URL_AMERICA_FEED = "http://www.dota2.com/webapi/ILeaderboard/GetDivisionLeaderboard/v0001?division=americas";
@@ -53,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        // Sample AdMob app ID: ca-app-pub-7562464918148227~6857587358
+        MobileAds.initialize(this, "ca-app-pub-7562464918148227~6857587358");
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

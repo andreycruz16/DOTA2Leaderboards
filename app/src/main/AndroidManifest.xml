@@ -12,6 +12,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!-- Sample AdMob App ID: ca-app-pub-7562464918148227~6857587358 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7562464918148227~6857587358"/>
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize"
