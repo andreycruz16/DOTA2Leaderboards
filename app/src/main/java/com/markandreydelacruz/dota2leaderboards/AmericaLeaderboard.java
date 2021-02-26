@@ -1,19 +1,14 @@
 package com.markandreydelacruz.dota2leaderboards;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.graphics.Color;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
+
+import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
